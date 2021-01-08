@@ -1,0 +1,460 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+
+}
+body,html{
+
+    width: 100%;
+    height: 100%;
+
+}
+body{
+
+ background: #e4e4e4;
+    
+}
+header{
+
+    display: flex;
+    z-index: 20;
+    height: 2.5rem;
+    padding: .5% 1%;
+    align-items: center;
+    width: 98%;
+    margin-bottom: 1rem;
+    background-color: white;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.048);
+    position: sticky;
+    top: 0px;
+
+}
+#logo{
+
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+}
+#right{
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+#right>a{
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 .5rem;
+
+}
+#right>a>svg{
+
+    height: 60%;
+
+}
+#target{
+
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    padding: 0rem 1rem;
+    margin: 20px auto;
+    border-radius: 3px;
+
+}
+#target>img{
+
+    display: block;
+    width: 55%;
+    animation: opacity .5s ease-in-out;
+
+}
+.text-presentation{
+
+    border-right: 1px solid #cccccc;
+
+}
+.text-presentation>h1{
+
+    font-size:35px;
+    font-weight: 600;
+
+}
+.text-presentation>h2{
+
+    font-weight: 500;
+    margin-bottom: .5rem;
+
+}
+.text-presentation>a{
+
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    padding-left: .2rem;
+    padding-right: .2rem;
+
+}
+.mini-banners{
+
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    width: 92%;
+    height: 7rem;
+    margin: 2rem auto;
+
+}
+#btn-back{
+
+    position: absolute;
+    top:0px;
+    left: 0px;
+    z-index: 5;
+    outline-color: 0px;
+    height: 100%;
+    border: 0px;
+    width: 40px;
+    font-size: 30px;
+    color: white;
+    background: rgba(0, 0, 0, 0.52);
+
+}
+#btn-next{
+
+    position: absolute;
+    right:0px;
+    top: 0;
+    z-index: 5;
+    height: 100%;
+    width: 40px;    
+    outline-color: 0;
+    border: 0px;
+    font-size: 30px;
+    color: white;
+    background: rgba(0, 0, 0, 0.52);
+
+}
+#banners{
+
+    height: 7rem;
+    width: 100%;
+    display: flex;
+    transition: .2s ease-in;
+
+}
+.banner{
+    display: table;
+    width: 100%;
+    height: 7rem;
+    color: white;
+    background: #cccccc;
+    text-decoration: none;
+}
+.banner:first-child{
+
+    background: rgb(252,227,25);
+    background: linear-gradient(330deg, rgba(252,227,25,1) 0%, rgba(236,182,0,1) 41%, rgba(255,102,0,1) 94%); 
+    
+
+}
+.banner:nth-child(2){
+
+    background: rgb(251,252,25);
+background: linear-gradient(330deg, rgba(251,252,25,1) 0%, rgba(0,198,255,1) 100%);
+
+}
+.banner:nth-child(3){
+
+    background: rgb(62,13,88);
+    background: linear-gradient(330deg, rgba(62,13,88,1) 0%, rgba(1,4,75,1) 100%);
+
+}
+
+
+.info{
+
+    display: flex;
+    margin: auto;
+    width: 40rem;
+    height: 7rem;
+    justify-content: space-around;
+    text-decoration: none;
+
+}
+.info>p{
+
+    font-size: 30px;
+    font-weight: 700;
+    margin: auto;
+
+}
+.info>img{
+
+    height: 300px;
+
+}
+.mini-banners>button{
+
+    cursor: pointer;
+    outline: 0px;
+
+}
+.banner:nth-child(2)>.info>img{
+
+    width: 200px;
+    height: 200px;
+
+}
+.banner:nth-child(3)>.info>img{
+
+    width: 140px;
+    height: 140px;
+
+}
+.banner:nth-child(4){
+
+    background-color: black;
+
+}
+.first{
+
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding-top: 2rem;
+
+}
+.first>h1{
+
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    display: table;
+
+}
+.first>img{
+
+    display: block;
+    margin: auto;
+    width: 80%;
+
+}
+.second{
+
+    background-color: black;
+    color: white;
+    display: flex;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 5rem;
+
+}
+.second>.flip-text{
+
+    margin-left: 4%;
+    
+    width: 60%;
+
+}
+.flip-text>h1{
+
+    border-left: 10px solid white;
+    padding-left: 5px;
+    flex: 1;
+
+}
+.second>img{
+
+    width: 50rem;
+    height: 50rem;
+    position: absolute;
+    right: -100px;
+
+}
+#move{
+
+    opacity: 0;
+    transform: translateX(-10%);
+    transition: .5s;
+
+}
+@keyframes opacity{
+
+    0%{
+
+        opacity: 0;
+
+    }
+    100%{
+
+        opacity: 1;
+
+    }
+
+}
+@media(max-width:1024px){
+
+    #target{
+
+        height: 20rem;
+
+    }
+    #target>img{
+
+        width: 350px;
+
+    }
+    .text-presentation>h1{
+
+        font-size:25px;
+        font-weight: 600;
+    
+    }
+    .text-presentation>h2{
+    
+        font-weight: 500;
+        font-size: 20;
+        margin-bottom: .5rem;
+    
+    }
+    .first{
+
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+
+    }
+    .first>h1{
+
+        font-size: 30px;
+        margin: 2rem auto;
+
+    }
+
+    .first>img{
+
+        width: 700px;
+
+    }
+
+    .second>img{
+
+        width: 40rem;
+        height: 40rem;
+        position: absolute;
+        right: -150px;
+    
+    }
+}
+@media(max-width:768px){
+
+    header{
+
+        background-color: white;
+        z-index: 10;
+
+    }
+    #target{
+
+        flex-direction: column-reverse;
+        padding-bottom: 50px;
+        overflow: hidden;
+        margin-bottom: 4rem;
+
+    }
+    #target>.text-presentation{
+
+        border-right: none;
+
+    }
+    #target>img{
+
+        position: relative;
+        margin-top: 1rem;
+        z-index: 1;
+        margin-bottom: 2rem;
+        width: 80%;
+
+    }
+    .mini-banners{
+
+
+        margin-bottom: 4rem;
+
+    }
+    .info{
+
+        width: 15rem;
+
+    }
+    .info>img{
+
+        width: 150px;
+        height: 150px;
+
+    }
+    .info>p{
+
+        font-size: 15px;
+        background-color: red;
+        padding: .5rem;
+
+    }
+    .banner:nth-child(2)>.info>img{
+
+        width: 150px;
+        height: 150px;
+
+    }
+    .banner:nth-child(2)>.info>p{
+
+        background: rgb(20, 110, 184);
+
+    }
+    .banner:nth-child(4)>.info>p,
+    .banner:nth-child(3)>.info>p{
+
+        background:none;
+
+    }
+    .first>img{
+
+        width: 100%;
+
+    }
+    .second{
+
+        height: 25rem;
+
+    }
+    .second>.flip-text{
+
+        width: 80%;
+        font-size: 12px;
+        position: relative;
+        z-index: 10;
+        display: table;
+        background-color: rgba(0, 0, 0, 0.411);
+        height: auto;
+    }
+    .second>img{
+
+        width: 100%;
+        height: auto;
+        right: -40px;
+        bottom: 0px;
+
+    }
+
+}
