@@ -21,14 +21,38 @@ header{
     display: flex;
     z-index: 20;
     height: 2.5rem;
-    padding: .5% 1%;
+    padding: .5rem 1rem;
     align-items: center;
     width: 98%;
+    position: fixed;
     margin-bottom: 1rem;
     background-color: white;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.048);
-    position: sticky;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.076);
     top: 0px;
+
+}
+nav{
+
+    width: 40%;
+    height: calc(100% - 3.3rem);
+    background: rgb(255, 255, 255);
+    position: fixed;
+    top: 3.3rem;
+    box-shadow: -5px 6px 5px rgba(0, 0, 0, 0.145);
+    right: 0px;
+    z-index: 20;
+    display: none;
+    overflow: auto;
+
+}
+li{
+
+    list-style: none;
+
+}
+a{
+
+    text-decoration: none;
 
 }
 #logo{
@@ -46,6 +70,7 @@ header{
     align-items: center;
 
 }
+#right>button,
 #right>a{
 
     height: 100%;
@@ -54,11 +79,45 @@ header{
     margin: 0 .5rem;
 
 }
+#right>button>svg,
 #right>a>svg{
 
     height: 60%;
 
 }
+.arrow{
+
+    width: 1.2rem;
+    height: 1.2rem;
+    position: relative;
+
+}
+.arrow::before,
+.arrow::after{
+
+    content: '';
+    display: block;
+    background-color: #888888;
+    position: absolute;
+    width: 53%;
+    height: .15rem;
+    left: 25%;
+
+}
+.arrow::before{
+
+    top: 30%;
+    transform: rotateZ(45deg);
+
+}
+.arrow::after{
+
+    top: 60%;
+    
+    transform: rotateZ(315deg);
+
+}
+
 #target{
 
     background-color: black;
@@ -68,6 +127,7 @@ header{
     width: 90%;
     padding: 0rem 1rem;
     margin: 20px auto;
+    margin-top: 4rem;
     border-radius: 3px;
 
 }
@@ -93,6 +153,48 @@ header{
 
     font-weight: 500;
     margin-bottom: .5rem;
+
+}
+.flex{
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+}
+.flex-1{
+
+    flex: 1;
+
+}
+.flex-center{
+
+    align-items: center;
+
+}
+.ml-1{
+
+    margin-left: 1rem;
+
+}
+.mt-1{
+
+    margin-top: 1rem;
+
+}
+.mb-1{
+
+    margin-bottom: 1rem;
+
+}
+.ftn-12{
+
+    font-size: 1.2rem;
+
+}
+.color-bg{
+
+    color: #333333;
 
 }
 .text-presentation>a{
@@ -366,6 +468,11 @@ background: linear-gradient(330deg, rgba(251,252,25,1) 0%, rgba(0,198,255,1) 100
         z-index: 10;
 
     }
+    nav{
+
+        z-index: 30;
+
+    }
     #target{
 
         flex-direction: column-reverse;
@@ -443,8 +550,7 @@ background: linear-gradient(330deg, rgba(251,252,25,1) 0%, rgba(0,198,255,1) 100
 
         width: 80%;
         font-size: 12px;
-        position: relative;
-        z-index: 10;
+        z-index: 4;
         display: table;
         background-color: rgba(0, 0, 0, 0.411);
         height: auto;

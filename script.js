@@ -3,10 +3,11 @@ const bannerrs = document.querySelectorAll(".banner")
 const back = document.getElementById('btn-back')
 const next = document.getElementById('btn-next')
 const move = document.getElementById('move')
+const menu = document.getElementById('menu')
 
 var index = 0
 var presed = false
-
+var clickedNav = true
 
 const WinWid = window.innerWidth
 const bannerWidth = WinWid
@@ -45,7 +46,22 @@ next.onclick = ()=>{
     presed = true
 
 }
+menu.onclick = ()=>{
 
+    let nav = document.querySelector('nav')
+
+    if(clickedNav){
+
+        nav.setAttribute('style','display:block;')
+
+    }else{
+
+        nav.setAttribute('style','display:none;')
+
+
+    }
+    clickedNav = !clickedNav
+}
 function reportWindowsSize(){
 
     const WinWid = window.innerWidth
